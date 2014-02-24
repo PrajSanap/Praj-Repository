@@ -1,0 +1,15 @@
+<apex:page controller="AccountTableController">
+	<apex:form >
+		<apex:pageBlock >
+        
+        <apex:outputPanel id="table" style="width:50%">
+			<apex:pageBlockTable value="{!lstAccount}" var="acc" columns="2" width="50%">
+				<apex:column headerValue="Account Name">
+					<apex:outputLink value="/{!acc.Id}">{!acc.Name}</apex:outputLink> 					
+				</apex:column>
+			</apex:pageBlockTable>
+		</apex:outputPanel>
+					
+		</apex:pageBlock>
+	</apex:form>
+</apex:page>
